@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantitative Trader</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo">Quantitative Trader</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="qsn-index.html">Quem somos nós</a></li>
+        <li><a href="#" id="analise-quantitativa">Análise Quantitativa</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="hero">
+    <div class="container" style="display: none;" id="graficos-container">
+      <div class="row">
+        <div class="col">
+          <!-- Botões para alternar entre os gráficos -->
+          <button class="graph-button" onclick="mostrarGrafico('fig1.html')">Dólar Futuro</button>
+          <button class="graph-button" onclick="mostrarGrafico('fig2.html')">Indice Ibov Futuro</button>
+          <iframe id="grafico" style="width:100%;height:50vh;"></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="mobile-navbar.js"></script>
+  <script>
+    document.getElementById('analise-quantitativa').addEventListener('click', function() {
+      var container = document.getElementById('graficos-container');
+      container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    });
+
+    function mostrarGrafico(src) {
+      document.getElementById('grafico').src = src;
+    }
+  </script>
+</body>
+</html>

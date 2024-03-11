@@ -11,7 +11,7 @@ lista_empresas = pd.read_csv('tickers.csv')['tickers'].to_list()
 layout = html.Div([dcc.Dropdown(lista_empresas, value = 'Dolar', id = 'escolher-grafico-aovivo', className = 'dcc-padrao',
                                                         style = {"background-color": 'black', 'color': 'white'}),
                                                         
-                                dcc.Graph( style={"width": "100%", 'height': "302px", 'margin-top': '16px', 
+                                dcc.Graph( style={"width": "100%", 'height': "600px", 'margin-top': '16px', 
                                                              'border-radius':'8px', 
                                                              'background-color': '#131516', 'border': "2px solid #212946"}, id ='grafico_candle')])
 

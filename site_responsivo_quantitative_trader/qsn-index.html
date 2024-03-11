@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantitative Trader</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    }
+
+    .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    }
+
+    /* Estilo para a seção sobre-nos */
+    .sobre-nos {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    }
+
+    .sobre-nos h1,
+    .sobre-nos h2 {
+    margin-bottom: 30px;
+    }
+
+    .sobre-nos p,
+    .sobre-nos li {
+    font-size: 1.2em; /* Aumentando o tamanho do texto */
+    margin-bottom: 10px;
+    }
+
+    /* Responsividade */
+    @media screen and (max-width: 700px) {
+    .container {
+        width: 95%;
+    }
+
+    .sobre-nos h1,
+    .sobre-nos h2 {
+        font-size: 1.5em;
+    }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="logo">Quantitative Trader</a>
+      <button class="hamburger"></button>
+      <ul class="nav-list">
+        <li><a href="qsn-index.html">Quem somos nós</a></li>
+        <li><a href="#">Economia Quantitativa</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+    <main class="hero">
+        <div class="container">
+        <section class="sobre-nos">
+            <h1>Quantitative Trader: Liderando a Inovação no Mercado Financeiro</h1>
+    
+            <h2>Visão Geral:</h2>
+            <p>A Quantitative Trader é uma empresa inovadora no setor de mercado financeiro, dedicada a fornecer análises, dados e estudos quantitativos de ponta...</p>
+    
+            <h2>Missão:</h2>
+            <p>Nossa missão é empoderar os participantes do mercado financeiro com informações precisas e análises aprofundadas...</p>
+    
+            <h2>Compromisso com a Excelência:</h2>
+            <p>Nossa dedicação à precisão, integridade e serviço ao cliente nos estabelece como um grande player no mercado financeiro...</p>
+        </section>
+        </div>
+    </main>
+
+  <script>
+    // Função para mudar o gráfico exibido no iframe
+    function mostrarGrafico(src) {
+      document.getElementById('grafico').src = src;
+    }
+  </script>
+</body>
+</html>

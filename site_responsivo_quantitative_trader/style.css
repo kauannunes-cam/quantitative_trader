@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-family: sans-serif;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.graph-button {
+  background-color: #EF7737; /* Cor de fundo */
+  color: white; /* Texto branco */
+  padding: 10px 20px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão ao passar o mouse */
+  transition: background-color 0.3s ease; /* Transição suave ao mudar cor de fundo */
+  margin: 10px; /* Margem em torno dos botões */
+}
+
+.graph-button:hover {
+  background-color: black;
+}
+
+.graph-button:active {
+  transform: scale(0.98); /* Escala ligeiramente menor */
+}
+
+.header {
+  background: #EF7737;
+  padding-inline: 16px;
+}
+
+.nav {
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 55px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./bg.png") no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+.nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: 18px;
+  color: #000;
+  padding-block: 16px;
+}
+
+.hero {
+  height: calc(100vh - 70px);
+  background: center / cover no-repeat url("./bg.png");
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #000;
+  cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #000;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.container {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; /* Para espaçar os containers igualmente */
+}
+
+.col {
+  flex: 1; /* Faz com que cada coluna ocupe a mesma proporção do espaço disponível */
+  margin: 0 35px; /* Espaçamento entre as colunas */
+  padding: 60px; /* Espaçamento interno */
+  border: 3px solid #EF7737; /* Borda laranja como solicitado */
+  background-color: #000; /* Fundo preto para os containers */
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+    z-index: 1;
+    transition: 0.3s; /* Transição movida para dentro da media query */
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    transition: 0.3s; /* Transição movida para dentro da media query */
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #EF7737;
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-list a {
+    font-size: 24px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .nav-list a {
+    opacity: 1;
+  }
+
+  .nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  
+}

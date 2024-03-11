@@ -180,7 +180,7 @@ tab_painel = html.Div([
         [dbc.Col(
             [
                 dbc.Row(ativos_ao_vivo.layout),
-                dbc.Row(grafico_ativos.layout),
+                #dbc.Row(grafico_ativos.layout),
             ]
 
         ),
@@ -189,6 +189,16 @@ tab_painel = html.Div([
 
 
     ),
+    
+        dbc.Row(
+            dbc.Col(html.H1("Gráfico Dolar Futuro", className="text-center"), width=12)
+        ),
+
+        dbc.Row(
+            dbc.Col(
+                dbc.Row(grafico_ativos.layout)
+            )
+        )
 
 ])
 
@@ -229,15 +239,21 @@ tab_ia = html.Div([
         )
     ]),
     dbc.Row(
-        dbc.Col(
-            dbc.Card(
-                dbc.CardBody([
+        [
+            dbc.Col(
+                [
                     html.H4("Relatório de Modelo LSTM para Previsão de Preços de Ativos em Séries Temporais", className="card-title"),
                     html.P(f"Ativo Analisado: {ticker}", className="card-text"),
                     html.P(f"Período de Análise: De {start_date.date()} até {end_date.date()}", className="card-text"),
                     html.P(f"Total de Dados: {len(cotacao)} preços de fechamento", className="card-text"),
                     html.P(f"Dados para Treinamento: {tamanho_dados_treinamento} dias (80% dos dados)", className="card-text"),
                     html.P(f"Dados para Teste: {len(cotacao) - tamanho_dados_treinamento} dias (20% dos dados)", className="card-text"),
+                ],
+                width=5,  # Ajuste conforme necessário para o layout desejado
+                className="mb-4"  # Adiciona margem na parte inferior se necessário
+            ),
+            dbc.Col(
+                [
                     html.P("Estrutura do Modelo LSTM:", className="card-text"),
                     html.Ul([
                         html.Li("Primeira camada LSTM: 50 neurônios"),
@@ -250,10 +266,12 @@ tab_ia = html.Div([
                         html.Li(f"Correlação entre Dados Reais e Previsões: {correlacao:.4f}")
                     ]),
                     html.P(f"Previsão para a Data Mais Recente ({end_date.date()}): A direção projetada é: {direcao_mercado}", className="card-text"),
-                ])
-            ),
-            width={'size': 10, 'offset': 1}
-        )
+                ],
+                width=5,  # Ajuste conforme necessário para o layout desejado
+                className="mb-4"  # Adiciona margem na parte inferior se necessário
+            )
+        ],
+        justify="center"  # Centraliza as colunas na linha
     )
 ])
 tab_noticias =  dbc.Row(

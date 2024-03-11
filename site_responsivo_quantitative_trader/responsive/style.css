@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.graph-button {
+  background-color: #EF7737; /* Cor de fundo */
+  color: white; /* Texto branco */
+  padding: 10px 20px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão ao passar o mouse */
+  transition: background-color 0.5s ease; /* Transição suave ao mudar cor de fundo */
+  margin: 10px; /* Margem em torno dos botões */
+}
+
+.graph-button:hover {
+  background-color: black;
+}
+
+.graph-button:active {
+  transform: scale(0.98); /* Escala ligeiramente menor */
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 55px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./bg.png") no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #EF7737;
+  height: 8vh;
+}
+
+main {
+  background: center / cover no-repeat url("./bg.png");
+  background-size: cover;
+  height: 92vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.hero {
+  height: calc(100vh - 70px);
+  background: center / cover no-repeat url("./bg.png");
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.container {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; /* Para espaçar os containers igualmente */
+}
+
+.col {
+  flex: 1; /* Faz com que cada coluna ocupe a mesma proporção do espaço disponível */
+  margin: 0 35px; /* Espaçamento entre as colunas */
+  padding: 30px; /* Espaçamento interno */
+  border: 3px solid #EF7737; /* Borda laranja como solicitado */
+  background-color: #000; /* Fundo preto para os containers */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: url('bg.png') no-repeat center center fixed; 
+  background-size: cover;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.sobre-nos {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0.6); /* Fundo branco com opacidade */
+  border-radius: 15px; /* Bordas arredondadas */
+}
+
+.sobre-nos h1,
+.sobre-nos h2 {
+  margin-bottom: 30px;
+}
+
+.sobre-nos p,
+.sobre-nos li {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+      width: 95%;
+  }
+
+  .sobre-nos h1,
+  .sobre-nos h2 {
+      font-size: 2em;
+  }
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #EF7737;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}

@@ -71,18 +71,18 @@ layout =  dbc.Row([dcc.Interval(
                                                         colunas_padrao,
                                                         id = 'cotacoes-tempo-real',
                                                         style_header={
-                                                                    'backgroundColor': '#49E2B1',
+                                                                    'backgroundColor': '#EB7737',
                                                                     'fontWeight': 'bold',
                                                                     'border': '0px',
                                                                     'font-size': "12px",
-                                                                    'color': '#D3D6DF',
+                                                                    'color': '#FFFFFF',
                                                                     "borderRadius": "8px"},
                                                                     
                                                         style_cell={'textAlign': 'center',
                                                                     'padding': '12px 8px',
-                                                                    'backgroundColor': '#49E2B1',
+                                                                    'backgroundColor': '#EB7737',
                                                                     "borderRadius": "8px",
-                                                                    'color': '#D3D6DF'
+                                                                    'color': '#FFFFFF'
                                                                     
                                                                     },
 
@@ -134,7 +134,7 @@ layout =  dbc.Row([dcc.Interval(
                                                                     colunas_padrao,
                                                                     id = 'maiores_altas',
                                                                     style_header={
-                                                                                'backgroundColor': '#49E2B1',
+                                                                                'backgroundColor': '#EB7737',
                                                                                 'fontWeight': 'bold',
                                                                                 'border': '0px',
                                                                                 'font-size': "12px",
@@ -142,7 +142,7 @@ layout =  dbc.Row([dcc.Interval(
                                                                                 
                                                                     style_cell={'textAlign': 'center',
                                                                                 'padding': '12px 8px',
-                                                                                'backgroundColor': '#49E2B1',
+                                                                                'backgroundColor': '#EB7737',
                                                                                 'color': '#D3D6DF'
                                                                                 },
 
@@ -191,7 +191,7 @@ layout =  dbc.Row([dcc.Interval(
                                                         colunas_padrao,
                                                         id = 'maiores_baixas',
                                                         style_header={
-                                                                    'backgroundColor': '#2B6960',
+                                                                    'backgroundColor': '#EB7737',
                                                                     'fontWeight': 'bold',
                                                                     'border': '0px',
                                                                     'font-size': "12px",
@@ -199,7 +199,7 @@ layout =  dbc.Row([dcc.Interval(
                                                                     
                                                         style_cell={'textAlign': 'center',
                                                                     'padding': '12px 8px',
-                                                                    'backgroundColor': '#212946',
+                                                                    'backgroundColor': '#EB7737',
                                                                     'color': '#2B6960'
                                                                     },
 

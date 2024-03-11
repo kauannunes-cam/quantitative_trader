@@ -23,7 +23,7 @@ layout = html.Div([
                     ]),
                     dbc.Row(dcc.Graph(style={"width": "100%", 'height': "302px", 'margin-top': '16px', 'width': '90%', 
                                                              'border-radius':'8px',
-                                                             'background-color': '#131516', 'border': "2px solid #49E2B1"}, 
+                                                             'background-color': '#131516', 'border': "2px solid #EB7737"}, 
                                                              id ='grafico_economia'), style={'display': 'flex', 'justify-content': 'center'})
                 ])
             ]),
@@ -31,7 +31,7 @@ layout = html.Div([
             dbc.Row([
                 html.H1(children="Estatísticas", 
                         className='categorias-dash1', 
-                        style={'width': '100%', 'backgroundColor': '#49E2B1'})
+                        style={'width': '100%', 'backgroundColor': '#EB7737'})
             ], style={'display': 'flex', 'justify-content': 'center'})
             ,
 
@@ -101,11 +101,11 @@ def update_metrics(indicador):
                                     style_header={'display': 'none'},
                                     style_cell={'textAlign': 'center',
                                                 'padding': '12px 8px',
-                                                'backgroundColor': '#2B6960',
-                                                'color': '#D3D6DF'
+                                                'backgroundColor': '#DBA080',
+                                                'color': '#FFFFFF',
                                                 },
 
-                                    style_data={ 'border': '2px solid #222729',
+                                    style_data={ 'border': '2px solid #EB7737',
                                                 'font-size': "12px" },
 
                                                 style_table={
@@ -118,7 +118,7 @@ def update_metrics(indicador):
                                             'if': {
                                                 'column_id': 'ignore_1',
                                             },
-                                            'backgroundColor': '#49E2B1',
+                                            'backgroundColor': '#EB7737',
                                             'fontWeight': 'bold',
                                             'borderRadius': '0px',
                                             'font-size': "12px",

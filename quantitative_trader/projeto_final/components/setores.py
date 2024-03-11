@@ -36,12 +36,12 @@ layout = dbc.Row([
                                                                     'fontWeight': 'bold',
                                                                     'border': '0px',
                                                                     'font-size': "12px",
-                                                                    'color': '#EB7737'},
+                                                                    'color': '#FFFFFF'},
                                                                     
                                                         style_cell={'textAlign': 'center',
                                                                     'padding': '12px 8px',
                                                                     'backgroundColor': '#131516',
-                                                                    'color': '#EB7737'
+                                                                    'color': '#FFFFFF'
                                                                     },
 
                                                         style_data={ 'border': '0px',
@@ -107,7 +107,7 @@ layout = dbc.Row([
                                                                     
                                                                     'borderRadius': '8px',
                                                                     "overflow": "hidden",
-                                                                    'border': '2px solid #222729' 
+                                                                    'border': '2px solid #EB7737' 
                                                                 },
 
                                                         style_data_conditional=[

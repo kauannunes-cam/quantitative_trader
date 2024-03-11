@@ -138,12 +138,12 @@ layout =  dbc.Row([dcc.Interval(
                                                                                 'fontWeight': 'bold',
                                                                                 'border': '0px',
                                                                                 'font-size': "12px",
-                                                                                'color': '#D3D6DF'},
+                                                                                'color': '#FFFFFF'},
                                                                                 
                                                                     style_cell={'textAlign': 'center',
                                                                                 'padding': '12px 8px',
                                                                                 'backgroundColor': '#EB7737',
-                                                                                'color': '#D3D6DF'
+                                                                                'color': '#FFFFFF'
                                                                                 },
 
                                                                     style_data={ 'border': '0px',
@@ -195,12 +195,12 @@ layout =  dbc.Row([dcc.Interval(
                                                                     'fontWeight': 'bold',
                                                                     'border': '0px',
                                                                     'font-size': "12px",
-                                                                    'color': '#D3D6DF'},
+                                                                    'color': '#FFFFFF'},
                                                                     
                                                         style_cell={'textAlign': 'center',
                                                                     'padding': '12px 8px',
                                                                     'backgroundColor': '#EB7737',
-                                                                    'color': '#2B6960'
+                                                                    'color': '#D3D6DF'
                                                                     },
 
                                                         style_data={ 'border': '0px',
